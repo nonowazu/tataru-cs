@@ -9,5 +9,8 @@ if (discordToken == null)
 
 var web = new Web();
 var bot = new Bot(discordToken);
-await web.Run();
-await bot.Start();
+web.Run();
+bot.Start();
+
+// give async services some time to run
+await Task.Delay(Timeout.Infinite);
