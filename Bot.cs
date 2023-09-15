@@ -55,8 +55,7 @@ public class Bot
 
     private async Task HandleCommandAsync(SocketMessage arg)
     {
-        var msg = arg as SocketUserMessage;
-        if (msg == null) return;
+        if (arg is not SocketUserMessage msg) return;
 
         // don't respond to ourselves or another bot, though the latter would be funny
         if (msg.Author.Id == _client.CurrentUser.Id || msg.Author.IsBot) return;
