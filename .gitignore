@@ -532,3 +532,6 @@ FodyWeavers.xsd
 # Ignore all local history of files
 .history
 .ionide
+
+# env files
+.env
