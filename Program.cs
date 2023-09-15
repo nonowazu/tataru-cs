@@ -9,4 +9,5 @@ if (discordToken == null)
 
 var web = new Web();
 var bot = new Bot(discordToken);
+await web.Run();
 await bot.Start();

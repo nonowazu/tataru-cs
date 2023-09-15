@@ -1,5 +1,7 @@
 public class Web
 {
+    private WebApplication _app;
+
     public Web()
     {
         // TODO: pass args here
@@ -7,25 +9,28 @@ public class Web
         // Add services to the container.
         builder.Services.AddRazorPages();
 
-        var app = builder.Build();
+        _app = builder.Build();
 
         // Configure the HTTP request pipeline.
-        if (!app.Environment.IsDevelopment())
+        if (!_app.Environment.IsDevelopment())
         {
-            app.UseExceptionHandler("/Error");
+            _app.UseExceptionHandler("/Error");
             // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-            app.UseHsts();
+            _app.UseHsts();
         }
 
-        app.UseHttpsRedirection();
-        app.UseStaticFiles();
+        _app.UseHttpsRedirection();
+        _app.UseStaticFiles();
 
-        app.UseRouting();
+        _app.UseRouting();
 
-        app.UseAuthorization();
+        _app.UseAuthorization();
 
-        app.MapRazorPages();
+        _app.MapRazorPages();
+    }
 
-        app.Run();
+    public async Task Run()
+    {
+        await _app.RunAsync();
     }
 }
