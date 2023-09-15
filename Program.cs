@@ -3,8 +3,8 @@ var discordToken = Environment.GetEnvironmentVariable("DISCORD_TOKEN");
 
 if (discordToken == null)
 {
-Console.WriteLine("DISCORD_TOKEN isn't set");
-return;
+    Console.WriteLine("DISCORD_TOKEN isn't set");
+    return;
 }
 
 var web = new Web();
