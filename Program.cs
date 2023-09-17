@@ -7,10 +7,22 @@ if (discordToken == null)
     return;
 }
 
+// Cancellation token
+CancellationTokenSource source = new();
+var token = source.Token;
+var tasks = new List<Task>();
+
+Console.CancelKeyPress += new ConsoleCancelEventHandler((object? sender, ConsoleCancelEventArgs args) => {
+    source.Cancel();
+});
+
 var web = new Web();
 var bot = new Bot(discordToken);
-web.Run();
-bot.Start();
+tasks.Add(web.RunAsync());
+tasks.Add(bot.StartAsync());
 
-// give async services some time to run
-await Task.Delay(Timeout.Infinite);
+try
+{
+    Task.WaitAll([..tasks], token);
+}
+catch (OperationCanceledException) {} // Excepted on ^C/sigint

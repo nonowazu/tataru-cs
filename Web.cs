@@ -29,7 +29,7 @@ public class Web
         _app.MapRazorPages();
     }
 
-    public async Task Run()
+    public async Task RunAsync()
     {
         await _app.RunAsync();
     }
