@@ -27,7 +27,7 @@ public class Bot
         _commands.Log += Log;
     }
 
-    public async Task Start()
+    public async Task StartAsync()
     {
         await _client.LoginAsync(TokenType.Bot, _discordToken);
         await _client.StartAsync();
