@@ -1,4 +1,6 @@
-public class Web
+namespace Tataru;
+
+public class Web : IHostedService
 {
     private WebApplication _app;
 
@@ -7,7 +9,9 @@ public class Web
         // TODO: pass args here
         var builder = WebApplication.CreateBuilder();
         // Add services to the container.
-        builder.Services.AddRazorPages();
+        builder.Services
+            .AddSingleton<IHostLifetime, NoLifetime>()
+            .AddRazorPages();
 
         _app = builder.Build();
 
@@ -32,5 +36,15 @@ public class Web
     public async Task RunAsync()
     {
         await _app.RunAsync();
+    }
+
+    public async Task StartAsync(CancellationToken cancellationToken)
+    {
+        await _app.StartAsync(cancellationToken);
+    }
+
+    public async Task StopAsync(CancellationToken cancellationToken)
+    {
+        await _app.StopAsync(cancellationToken);
     }
 }
