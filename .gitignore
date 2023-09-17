@@ -535,3 +535,6 @@ FodyWeavers.xsd
 
 # env files
 .env
+
+# C# Dev Kit 
+.mono
