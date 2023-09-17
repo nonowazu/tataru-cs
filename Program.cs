@@ -8,7 +8,7 @@ if (discordToken == null)
 }
 
 // Cancellation token
-CancellationTokenSource source = new();
+var source = new CancellationTokenSource();
 var token = source.Token;
 var tasks = new List<Task>();
 
