@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tataru", "Tataru.csproj", "{34E3E879-4FE0-492D-BF19-1A2F3EF17F76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tataru", "src/Tataru.csproj", "{34E3E879-4FE0-492D-BF19-1A2F3EF17F76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

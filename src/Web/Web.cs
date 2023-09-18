@@ -1,4 +1,4 @@
-namespace Tataru;
+namespace Tataru.Web;
 
 public class Web : IHostedService
 {
@@ -7,7 +7,11 @@ public class Web : IHostedService
     public Web()
     {
         // TODO: pass args here
-        var builder = WebApplication.CreateBuilder();
+        var builder = WebApplication.CreateBuilder(new WebApplicationOptions 
+        {
+            WebRootPath = "../wwwroot"
+        });
+
         // Add services to the container.
         builder.Services
             .AddSingleton<IHostLifetime, NoLifetime>()

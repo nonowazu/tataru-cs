@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace tataru.Pages;
+namespace Tataru.Pages;
 
 public class PrivacyModel : PageModel
 {

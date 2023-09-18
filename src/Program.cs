@@ -1,5 +1,6 @@
 // discord parts
-using Tataru;
+using Tataru.Bot;
+using Tataru.Web;
 
 var discordToken = Environment.GetEnvironmentVariable("DISCORD_TOKEN");
 

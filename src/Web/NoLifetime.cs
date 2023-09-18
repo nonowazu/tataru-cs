@@ -1,7 +1,7 @@
 
 using Microsoft.AspNetCore.Components;
 
-namespace Tataru;
+namespace Tataru.Web;
 
 /// <summary>
 /// HACK to avoid running two lifetime management systems simultaneously. Can be removed when the web host and the generic host become one and the same again.

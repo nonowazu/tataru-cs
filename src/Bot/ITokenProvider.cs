@@ -1,4 +1,4 @@
-namespace Tataru;
+namespace Tataru.Bot;
 
 /// <summary>
 /// Interface to provide a token to dependency injection.
