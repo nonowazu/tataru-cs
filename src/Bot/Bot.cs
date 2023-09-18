@@ -3,7 +3,7 @@ using Discord.WebSocket;
 using Discord.Commands;
 using System.Reflection;
 
-namespace Tataru;
+namespace Tataru.Bot;
 
 public class Bot : IHostedService
 {

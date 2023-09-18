@@ -1,4 +1,4 @@
-namespace Tataru;
+namespace Tataru.Bot;
 
 /// <summary>
 /// Implementation of the <see cref="ITokenProvider"/> interface to provide a Discord Bot Token.
