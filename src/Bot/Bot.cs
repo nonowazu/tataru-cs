@@ -47,7 +47,7 @@ public class Bot : IHostedService
     private IServiceProvider ConfigureServices()
     {
         var map = new ServiceCollection();
-            //.AddSingleton()
+        //.AddSingleton()
 
         return map.BuildServiceProvider();
     }

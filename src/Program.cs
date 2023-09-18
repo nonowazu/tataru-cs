@@ -1,3 +1,5 @@
+// Team $TEAM's Tataru-powered Extended Attendance Manager (T.E.A.M.)
+
 // discord parts
 using Tataru.Bot;
 using Tataru.Web;
