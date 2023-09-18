@@ -1,11 +1,11 @@
-using Discord;
-using Discord.WebSocket;
-using Discord.Commands;
-using System.Reflection;
+using Discord; 
+using Discord.WebSocket; 
+using Discord.Commands; 
+using System.Reflection; 
 
-namespace Tataru.Bot;
+namespace Tataru.Bot; 
 
-public class Bot : IHostedService
+public class Bot : IHostedService 
 {
     private DiscordSocketClient _client;
     private readonly CommandService _commands;
@@ -16,7 +16,7 @@ public class Bot : IHostedService
     public Bot(ITokenProvider tokenProvider, ILogger<Bot> logger)
     {
         _discordToken = tokenProvider.Token;
-        _logger = logger;
+        _logger = logger;                    
         _client = new DiscordSocketClient();
         _client.Log += Log;
 
