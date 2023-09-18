@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0-alpine-amd64 as dotnet-builder
 
 WORKDIR /src
-COPY tataru.csproj .
+COPY Tataru.csproj .
 RUN dotnet restore
 COPY ./ .
 RUN dotnet publish -r linux-musl-x64 -c Release -o /build
@@ -12,4 +12,4 @@ EXPOSE 8080
 
 WORKDIR /build
 COPY --from=dotnet-builder /build .
-ENTRYPOINT ["/build/tataru"]
+ENTRYPOINT ["/build/Tataru"]
