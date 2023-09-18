@@ -7,7 +7,20 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/tataru.csproj",
+                "${workspaceFolder}/src/Tataru.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build release",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/Tataru.csproj",
+                "-c Release",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +32,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/tataru.csproj",
+                "${workspaceFolder}/src/Tataru.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +46,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/tataru.csproj"
+                "${workspaceFolder}/src/Tataru.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
