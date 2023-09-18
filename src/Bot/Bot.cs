@@ -1,7 +1,7 @@
-using Discord;
-using Discord.WebSocket;
-using Discord.Commands;
 using System.Reflection;
+using Discord;
+using Discord.Commands;
+using Discord.WebSocket;
 
 namespace Tataru.Bot;
 
