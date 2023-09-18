@@ -7,10 +7,7 @@ public class Web : IHostedService
     public Web()
     {
         // TODO: pass args here
-        var builder = WebApplication.CreateBuilder(new WebApplicationOptions 
-        {
-            WebRootPath = "../wwwroot"
-        });
+        var builder = WebApplication.CreateBuilder();
 
         // Add services to the container.
         builder.Services
