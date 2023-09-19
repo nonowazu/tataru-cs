@@ -12,4 +12,5 @@ EXPOSE 8080
 
 WORKDIR /build
 COPY --from=dotnet-builder /build .
+COPY wwwroot /build/wwwroot
 ENTRYPOINT ["/build/Tataru"]
